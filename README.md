@@ -9,7 +9,7 @@ The `dockernm/iac-tools-aws` Dockerfile provides a useful baseline image for run
 * [Introduction](#introduction)
 * [Tooling](#tooling)
 * [Prerequisities](#Prerequisities)
-* [How to Use](#How)
+* [How to Use](#How-to-use)
 * [Security](#security)
 
 
