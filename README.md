@@ -17,7 +17,7 @@ The `dockernm/iac-tools-aws` Dockerfile provides a useful baseline image for run
 
 # Introduction
 
-I use these tools for work across different client environment. I built this docker image to avoid cluttering up my laptop and getting into trouble with multiple different versions of python, pip and other packages that many of these tools use. I can have one container for each customer with a seperate set of AWS key etc so there is no chance of cross-contamination between clients. 
+I use these tools for work across different client environments. I built this docker image to avoid cluttering up my laptop and getting into trouble with multiple different versions of python, pip and other packages that many of these tools use. I can have one container for each customer with a seperate set of AWS key etc so there is no chance of cross-contamination between clients. 
 
 The image is based on Ubuntu (https://hub.docker.com/_/ubuntu) 
 
@@ -50,7 +50,10 @@ AWS CLI which is for [Terraform Backends](https://www.terraform.io/docs/backends
 - `aws` (2.1.31)
 
 [AWSUME](https://github.com/trek10inc/awsume) which is to allow automatic IAM role assumption on the AWS CLI (Very very useful)
-- `awsume` (4.5.1a2)
+- `awsume` (latest at time of publishing = 4.5.1a2)
+
+[Pre-commit](https://github.com/pre-commit/pre-commit)
+- ``pre-commit`` (latest at time of publishing = 2.11.1)
 
 
 # Prerequisities
@@ -63,12 +66,30 @@ In order to run this container you'll need docker installed.
 * [Linux](https://docs.docker.com/linux/started/)
 
 # How to use
+There are two options you have, you can download and run the container I have put on Docker Hub or download this repo and build your own image locally. 
+If you chose to build your own image you can amend the versions of some of the tools such as Terraform to meet your needs. 
+### Build your own image
+
+Clone this repo
+
+SSH - ``git clone git@github.com:nmarchini/iac-tools-aws.git``
+
+HTTPS - ``git clone https://github.com/nmarchini/iac-tools-aws.git && cd iac-tools-aws``
+
+Issue the docker build command ``docker build -t <image-name:tag> .``
+
+Example `docker build -t <my-iac-tools-aws:v1> .`
+
+
+### Download from Docker Hub and run 
 
 Download from Docker Hub (https://hub.docker.com/r/dockernm/iac-tools-aws)
    
-`docker pull dockernm/iac-tools-aws`
+`docker pull dockernm/iac-tools-aws && cd iac-tools-aws`
 
 `docker run -it dockernm/iac-tools-aws:latest /bin/bash`
+
+
 
 ### Security
 
