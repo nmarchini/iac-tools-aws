@@ -26,5 +26,6 @@ Temporary Items
 .apdisk
 
 #Intellij
-.idea
+
 .iml
+/.idea/
