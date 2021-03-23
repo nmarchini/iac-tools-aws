@@ -8,11 +8,11 @@ FROM ubuntu:rolling
 MAINTAINER Nick Marchini (https://github.com/nmarchini)
 
 # Used to control versions
-ARG VERSION_TERRAFORM=0.14.8 ## https://github.com/hashicorp/terraform/releases
-ARG VERSION_TFLINT=0.25.0 ## https://github.com/terraform-linters/tflint/releases
-ARG VERSION_AWS_CLI=2.1.31 ## https://github.com/aws/aws-cli/blob/v2/CHANGELOG.rst
-ARG VERSION_CHECKOV=1.0.854  ## https://github.com/bridgecrewio/checkov/releases
-ARG VERSION_TFSEC=0.39.10 ## https://github.com/tfsec/tfsec/releases
+ARG VERSION_TERRAFORM=0.14.8
+ARG VERSION_TFLINT=0.25.0
+ARG VERSION_AWS_CLI=2.1.31
+ARG VERSION_CHECKOV=1.0.854
+ARG VERSION_TFSEC=0.39.10
 
 # Install some common tools needed for the build
 RUN apt-get update -qq && apt-get install --no-install-recommends --no-install-suggests -qq -y \
