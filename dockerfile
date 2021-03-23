@@ -1,7 +1,8 @@
 # A baseline image for AWS tools for IAc.
 
 # Using Ubuntu as it has less vulnerabilities and debian but this should work with Debian:buster as well
-FROM ubuntu:latest
+#FROM ubuntu:latest
+FROM ubuntu:rolling
 
 # Some metadata.
 MAINTAINER Nick Marchini (https://github.com/nmarchini)
