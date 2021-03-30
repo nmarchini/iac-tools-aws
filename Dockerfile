@@ -11,7 +11,6 @@ MAINTAINER Nick Marchini (https://github.com/nmarchini)
 ARG VERSION_TERRAFORM=0.14.8
 ARG VERSION_TFLINT=0.25.0
 ARG VERSION_AWS_CLI=2.1.31
-ARG VERSION_CHECKOV=1.0.854
 ARG VERSION_TFSEC=0.39.10
 
 # Install some common tools needed for the build
@@ -52,7 +51,7 @@ RUN wget -q https://github.com/tfsec/tfsec/releases/download/v0.39.9-fix-recursi
     rm -f tfsec
 
 # Install Checkov
-RUN pip3 install --no-cache-dir --upgrade setuptools && pip3 install checkov==${VERSION_CHECKOV} && checkov -v
+RUN pip3 install --no-cache-dir --upgrade setuptools && pip3 install checkov && checkov -v
 
 # Install the AWS CLI.
 RUN  wget --user-agent=Mozilla --content-disposition -E -c https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.1.31.zip && \
