@@ -42,7 +42,7 @@ All baseline Ubuntu tools plus
 
 - `terraform` (0.14.8)
 - `tflint` (0.25.0)
-- `checkov` (1.0.854)
+- `checkov` (latest)
 - `tfsec` (0.39.10)
 
 AWS CLI which is for [Terraform Backends](https://www.terraform.io/docs/backends/)
