@@ -11,7 +11,7 @@ MAINTAINER Nick Marchini (https://github.com/nmarchini)
 ARG VERSION_TERRAFORM=0.14.8
 ARG VERSION_TFLINT=0.25.0
 ARG VERSION_AWS_CLI=2.1.31
-ARG VERSION_TFSEC=0.39.10
+ARG VERSION_TFSEC=0.39.20
 
 # Install some common tools needed for the build
 RUN apt-get update -qq && apt-get install --no-install-recommends --no-install-suggests -qq -y \
